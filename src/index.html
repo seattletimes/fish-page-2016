@@ -76,9 +76,13 @@
         <% for (var c in categories) {
           var cat = categories[c];
           cat.forEach(function(item) { %>
+            <div class="icon" style="top: <%= item.top %>%; left: <%= item.left %>%;">
+              <img src="./assets/Icons/splotch-1.png">
+              <div class="order"><%=item.order%></div>
+            </div>
 
 
-            <img class="element" style="top: <%= item.top %>; left: <%= item.left %>;" src="./assets/Icons/splotch-1.png">
+
           <% });
         } %>
       </div>
