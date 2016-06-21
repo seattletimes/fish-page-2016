@@ -77,8 +77,22 @@
           var cat = categories[c];
           cat.forEach(function(item) { %>
             <div class="icon" style="top: <%= item.top %>%; left: <%= item.left %>%;">
-              <img src="./assets/Icons/splotch-1.png">
               <div class="order"><%=item.order%></div>
+              <% if (item.category === "fish") { %>
+                <img src="./assets/Icons/splotch-1.png">
+              <% }
+              else if (item.category === "stay")  { %>
+                <img src="./assets/Icons/splotch-stay.png">
+
+              <% }
+              else if (item.category === "sightsee") { %>
+                <img src="./assets/Icons/splotch-sightsee.png">
+              <% }
+
+              else { %>
+                <img src="./assets/Icons/splotch-eat.png">
+
+              <% }%>
             </div>
 
 
