@@ -11,8 +11,8 @@
 
     <div class="hed"><img src="./assets/Fish/olympicfish-headline.png"></div>
 
-    <div class="flex-container">
-      
+    <div class="">
+
       <div class="main-text">
         <% var categories = {};
           json.FishPage2016_Sheet1.forEach(function(item) {
@@ -25,6 +25,7 @@
           <img src="./assets/Icons/fish-icon.png"> FISH
         </div>
         <% categories.fish.forEach(function (item) { %>
+
           <div class="item">
             <img src="./assets/Fish/<%=item.image%>-dummy-web.png">
             <div class="label">
@@ -33,6 +34,7 @@
                 <div class="order"><%=item.order%></div>
               </div>
               <div class="text"><%= item.label %></div>
+
             </div>
             <%= item.text %>
           </div>
@@ -64,12 +66,21 @@
         <% categories.eat.forEach(function (item) { %>
           <div class="item">
             <%= item.text %>
+
           </div>
         <% }); %>
       </div>
 
       <div class="map">
         <img src="./assets/Map/wa-map-dummy-web.png">
+        <% for (var c in categories) {
+          var cat = categories[c];
+          cat.forEach(function(item) { %>
+
+
+            <img class="element" style="top: <%= item.top %>; left: <%= item.left %>;" src="./assets/Icons/splotch-1.png">
+          <% });
+        } %>
       </div>
 
     </div>

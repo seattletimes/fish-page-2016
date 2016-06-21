@@ -17,8 +17,17 @@ body {
 
 .main-text {
   .flex(2);
+  @width: 40%;
+
   font-size: 15px;
   line-height: 1.6em;
+  width: @width;
+  margin-left: 100% - @width;
+
+  @media @mobile {
+    width: 100%;
+    margin-left: 0;
+  }
 
   .header {
     font-family: @df-sans;
@@ -72,7 +81,32 @@ body {
     }
   }
 }
+/* Mixin */
+.position(@position, @top, @right, @bottom, @left) {
+  position: @position;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+
 
 .map {
   .flex(3);
+  position: fixed;
+  width: 66%;
+  left: 0;
+  top: 350px;
+  z-index: -1;
+
+  @media @mobile {
+    position: static;
+    width: 100%;
+  }
+
+  .element {
+    height: 10px;
+    width: 10px;
+    //.position(absolute, 40%, 50%);
+  }
 }

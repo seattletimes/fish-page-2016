@@ -4,49 +4,63 @@
     "order": "A",
     "label": "Chinook at Neah Bay/La Push",
     "text": "The northern-most tip of Washington is the dividing point as salmon migrate south along the coast or head into the Strait of Juan de Fuca. Many anglers make their summer-time trek to catch large-sized chinook “king” salmon here. Fishing opens at Neah Bay from July 1-Aug. 21 or until catch quota of 6,200 chinook is achieved. La Push is open from July 1-Aug. 21 or until catch quota of 2,000 chinook is achieved. A robust population of lingcod, kelp greenling and black rockfish are here too.",
-    "image": "chinook"
+    "image": "chinook",
+    "top": "50.00%",
+    "left": "1300.00%"
   },
   {
     "category": "fish",
     "order": "B",
     "label": "Largemouth bass and cutthroat trout in Lake Ozette",
     "text": "Ozette is the third largest natural lake in the state, and it is open now through Oct. 31. It is best fished from a boat. Largemouth bass were introduced and are a non-native fish. Spring and summer is an excellent time to fish here. Anglers also like to fish for cutthroat trout. There is an artificial lure with singles barbless pointed hook rule, and it is catch and release for trout. No daily or size limit applies to largemouth bass, yellow perch, pikeminnow and bullhead.",
-    "image": "largemouth"
+    "image": "largemouth",
+    "top": "20.00%",
+    "left": "5300.00%"
   },
   {
     "category": "fish",
     "order": "C",
     "label": "Beardslee trout at Lake Crescent",
     "text": "This wonderfully crystal-blue lake with exceptional clarity is 166 feet deeper than iconic Smith Tower in downtown Seattle, and was formed by glaciers. About 7,000 or so years ago a large landslide dammed the lake and cut-off anadromous fish migration, including the beardslee trout, which are found nowhere else in the world. Catch-and-release fishing is open through Oct. 31. Artificial lures with a barbless single-point hook along with a two-ounce weight restriction is required. There are five fish species including the native beardslee, cutthroat trout (crescenti) and kokanee salmon. Two other non-recreational fish species are the pygmy whitefish and prickly sculpin.",
-    "image": "beardslee"
+    "image": "beardslee",
+    "top": "3.00%",
+    "left": "6300.00%"
   },
   {
     "category": "fish",
     "order": "D",
     "label": "Other viable options",
     "text": "While the northern Olympic coastal rivers are mainly known for winter steelhead, there are opportunities for summer hatchery steelhead. They include the Calawah, Bogachiel. The Quillayute river system received a plant of 32,910 steelhead smolt in 2014, which are expected to return this summer. The Lower Quinault, Queets and Salmon rivers are also popular places to fish. The Hoh in Olympic National Park is closed all summer, and closed much of the summer in state fisheries regulated waters.",
-    "image": "summersteelhead"
+    "image": "summersteelhead",
+    "top": "50.00%",
+    "left": "3500.00%"
   },
   {
     "category": "fish",
     "order": "E",
     "label": "Trout in high mountain lakes",
     "text": "“There are over 650 mountain lakes that can be accessed via a short day hike or multiple overnight stays,” Brenkman said. “These lakes have had systematic and casual stocking of nonnative trout from 1934 to 1975, and were stocked via horseback, planes, helicopters and backpack. Within the lakes we have Eastern brook trout and several varieties of cutthroat and rainbow trout.” The Seven Lakes Basin is home to eastern brook and rainbow trout. They include Soleduck, Morganroth, Long, No Name, Lunch, Clear, Lake 8 and Round, which are accessed via an 8-mile trail starting at the end of Sol Duc Hot Springs Road. On east side of the park in Skokomish Valley, try Flapjack Lake, which has eastern brook and rainbow trout. Off Hurricane Ridge and Obstruction Point Road are a series of lakes that include Moose, Grand and Gladys, which are primarily for eastern brook trout. All are open now through Oct. 31.",
-    "image": "easternbrook"
+    "image": "easternbrook",
+    "top": "5300.00%",
+    "left": "4600.00%"
   },
   {
     "category": "fish",
     "order": "F",
     "label": "Surf perch at Kalaloch Beach",
     "text": "A relatively flat beach-line and excellent access to nearby Kalaloch Lodge makes this a prime location to easily fish for a red tail surf perch. This under-fished species and largest in the surf perch family can be caught year-round, with summer offering the best action. Surf perch average 1 to 3 pounds. Key to success is looking for depressions, drop offs and deeper cuts in the beaches where the perch tend to school up. Use a long, stout fishing rod of 10 to 14 feet and a heavy spinning reel with 10- to 20-pound test fishing line. A slip sinker, three-quarters to 1 ounce, or a pyramid sinker of 3 to 5 ounces with a three-way swivel tied to a leader 20 to 30 inches long will get your bait where the fish are. Baits of choice are sand or ghost shrimp, sand crabs, mussels, clam necks, squid and pile worms. Soft plastic jigs laced with anise scent as well as Buzz Bomb-type jigs will attract fish.",
-    "image": "redtail"
+    "image": "redtail",
+    "top": "6300.00%",
+    "left": "4700.00%"
   },
   {
     "category": "fish",
     "order": "G",
     "label": "Dungeness crab in Hood Canal",
     "text": "A strong population of Dungeness crab can be found in the northern section, and crab abundance is still below average south of Ayock Point. Fishing is open through Sept. 5 with crabbing allowed Thursdays through Mondays of each week. The daily limit is five male Dungeness crab in hard-shell condition with a minimum carapace width of 6¼ inches. Fishermen may also keep six red rock crab daily, and each must measure at least 5 inches across. Gear may not be set or pulled out of the water from one hour after official sunset to one hour before official sunrise. All shellfish gear must be removed from the water on closed days. Dungeness crab must be recorded on catch record cards.",
-    "image": "crab"
+    "image": "crab",
+    "top": "6300.00%",
+    "left": "2300.00%"
   },
   {
     "category": "sightsee",
