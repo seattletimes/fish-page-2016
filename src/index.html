@@ -92,7 +92,13 @@
         </div>
         <% categories.sightsee.forEach(function (item) { %>
           <div class="item" data-order="<%= item.order %>">
-            <div class="label"><img class="splotch" src="./assets/Icons/splotch-1.png"><div class="text"><%= item.label %></div></div>
+            <div class="label">
+              <div class="order-splotch">
+                <img class="splotch" src="./assets/Icons/splotch-sightsee.png">
+                <div class="order"><%=item.order%></div>
+              </div>
+              <div class="text"><%= item.label %></div>
+            </div>
             <%= item.text %>
           </div>
         <% }); %>
@@ -101,8 +107,14 @@
           <img src="./assets/Headers/stay-header.png">
         </div>
         <% categories.stay.forEach(function (item) { %>
-          <div class="item"data-order="<%= item.order %>">
-
+          <div class="item" data-order="<%= item.order %>">
+            <div class="label">
+              <div class="order-splotch">
+                <img class="splotch" src="./assets/Icons/splotch-stay.png">
+                <div class="order"><%=item.order%></div>
+              </div>
+              <div class="text"><%= item.label %></div>
+            </div>
             <%= item.text %>
           </div>
         <% }); %>
@@ -112,8 +124,14 @@
         </div>
         <% categories.eat.forEach(function (item) { %>
           <div class="item" data-order="<%= item.order %>">
+            <div class="label">
+              <div class="order-splotch">
+                <img class="splotch" src="./assets/Icons/splotch-eat.png">
+                <div class="order"><%=item.order%></div>
+              </div>
+              <div class="text"><%= item.label %></div>
+            </div>
             <%= item.text %>
-
           </div>
         <% }); %>
       </div>
