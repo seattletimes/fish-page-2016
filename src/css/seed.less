@@ -110,6 +110,8 @@ body {
 
         .icon {
           font-size: 8px;
+
+
         }
     }
   }
@@ -154,18 +156,25 @@ body {
     opacity: 0;
     transition: all .3s linear;
     cursor: pointer;
+      &.focused {
+        img {
+          height: 200%;
+          width: 200%;
+        }
+      }
+      .order {
+        // font-weight: bold;
+        position: absolute;
+        font-family: @df-sans;
+        color: white;
+        font-size: 13px;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+      }
 
-    .order {
-      // font-weight: bold;
-      position: absolute;
-      font-family: @df-sans;
-      color: white;
-      font-size: 13px;
-      top: 50%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%);
-      -webkit-transform: translateY(-50%) translateX(-50%);
-    }
+
   }
 }
 
