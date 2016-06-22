@@ -8,9 +8,11 @@
     <%= t.include("partials/_head.html") %>
   </head>
   <body>
-    <div class="flex-container">
 
     <div class="hed"><img src="./assets/Fish/olympicfish-headline.png"></div>
+
+    <div class="flex-container">
+
     <% var categories = {};
       json.FishPage2016_Sheet1.forEach(function(item) {
         if (!categories[item.category]) categories[item.category] = [];
