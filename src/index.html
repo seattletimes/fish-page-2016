@@ -8,18 +8,51 @@
     <%= t.include("partials/_head.html") %>
   </head>
   <body>
-
-    <div class="hed"><img src="./assets/Fish/olympicfish-headline.png"></div>
-
     <div class="flex-container">
 
+    <div class="hed"><img src="./assets/Fish/olympicfish-headline.png"></div>
+    <% var categories = {};
+      json.FishPage2016_Sheet1.forEach(function(item) {
+        if (!categories[item.category]) categories[item.category] = [];
+        categories[item.category].push(item);
+      });
+    %>
+
+    <div class="map">
+      <img src="./assets/Map/wa-map-dummy-web.png">
+      <% for (var c in categories) {
+        var cat = categories[c];
+        cat.forEach(function(item) { %>
+          <div class="icon" style="top: <%= item.top %>%; left: <%= item.left %>%;">
+            <div class="order"><%=item.order%></div>
+
+            <% if (item.category === "fish") { %>
+              <img src="./assets/Icons/splotch-1.png">
+            <% }
+            else if (item.category === "stay")  { %>
+              <img src="./assets/Icons/splotch-stay.png">
+
+            <% }
+            else if (item.category === "sightsee") { %>
+              <img src="./assets/Icons/splotch-sightsee.png">
+            <% }
+
+            else { %>
+              <img src="./assets/Icons/splotch-eat.png">
+
+            <% }%>
+          </div>
+
+
+
+        <% });
+      } %>
+    </div>
+
+
+
       <div class="main-text">
-        <% var categories = {};
-          json.FishPage2016_Sheet1.forEach(function(item) {
-            if (!categories[item.category]) categories[item.category] = [];
-            categories[item.category].push(item);
-          });
-        %>
+
 
         <div class="header">
           <img src="./assets/Headers/fish-header.png">
@@ -27,7 +60,7 @@
         <% categories.fish.forEach(function (item) { %>
 
           <div class="item" data-order="<%= item.order %>">
-            <img src="./assets/Fish/<%=item.image%>-dummy-web.png">
+            <img src="./assets/Fish/<%=item.image%>-final.png">
             <div class="label">
               <div class="order-splotch">
                 <img class="splotch" src="./assets/Icons/splotch-1.png">
@@ -71,36 +104,7 @@
         <% }); %>
       </div>
 
-      <div class="map">
-        <img src="./assets/Map/wa-map-dummy-web.png">
-        <% for (var c in categories) {
-          var cat = categories[c];
-          cat.forEach(function(item) { %>
-            <div class="icon" style="top: <%= item.top %>%; left: <%= item.left %>%;">
-              <div class="order"><%=item.order%></div>
 
-              <% if (item.category === "fish") { %>
-                <img src="./assets/Icons/splotch-1.png">
-              <% }
-              else if (item.category === "stay")  { %>
-                <img src="./assets/Icons/splotch-stay.png">
-
-              <% }
-              else if (item.category === "sightsee") { %>
-                <img src="./assets/Icons/splotch-sightsee.png">
-              <% }
-
-              else { %>
-                <img src="./assets/Icons/splotch-eat.png">
-
-              <% }%>
-            </div>
-
-
-
-          <% });
-        } %>
-      </div>
 
     </div>
 
