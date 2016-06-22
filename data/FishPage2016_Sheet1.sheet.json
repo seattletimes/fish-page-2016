@@ -6,7 +6,7 @@
     "text": "The northern-most tip of Washington is the dividing point as salmon migrate south along the coast or head into the Strait of Juan de Fuca. Many anglers make their summer-time trek to catch large-sized chinook “king” salmon here. Fishing opens at Neah Bay from July 1-Aug. 21 or until catch quota of 6,200 chinook is achieved. La Push is open from July 1-Aug. 21 or until catch quota of 2,000 chinook is achieved. A robust population of lingcod, kelp greenling and black rockfish are here too.",
     "image": "chinook",
     "top": 4,
-    "left": 2
+    "left": 3
   },
   {
     "category": "fish",
@@ -32,8 +32,8 @@
     "label": "Other viable options",
     "text": "While the northern Olympic coastal rivers are mainly known for winter steelhead, there are opportunities for summer hatchery steelhead. They include the Calawah, Bogachiel. The Quillayute river system received a plant of 32,910 steelhead smolt in 2014, which are expected to return this summer. The Lower Quinault, Queets and Salmon rivers are also popular places to fish. The Hoh in Olympic National Park is closed all summer, and closed much of the summer in state fisheries regulated waters.",
     "image": "summersteelhead",
-    "top": 28,
-    "left": 17
+    "top": 30,
+    "left": 15
   },
   {
     "category": "fish",
@@ -42,7 +42,7 @@
     "text": "“There are over 650 mountain lakes that can be accessed via a short day hike or multiple overnight stays,” Brenkman said. “These lakes have had systematic and casual stocking of nonnative trout from 1934 to 1975, and were stocked via horseback, planes, helicopters and backpack. Within the lakes we have Eastern brook trout and several varieties of cutthroat and rainbow trout.” The Seven Lakes Basin is home to eastern brook and rainbow trout. They include Soleduck, Morganroth, Long, No Name, Lunch, Clear, Lake 8 and Round, which are accessed via an 8-mile trail starting at the end of Sol Duc Hot Springs Road. On east side of the park in Skokomish Valley, try Flapjack Lake, which has eastern brook and rainbow trout. Off Hurricane Ridge and Obstruction Point Road are a series of lakes that include Moose, Grand and Gladys, which are primarily for eastern brook trout. All are open now through Oct. 31.",
     "image": "easternbrook",
     "top": 41,
-    "left": 38
+    "left": 41
   },
   {
     "category": "fish",
@@ -94,7 +94,7 @@
     "category": "sightsee",
     "order": 5,
     "text": "The Elwha River Bridge just west of Port Angeles offers great views and is a link to the Olympic Discovery Trail.",
-    "top": 15,
+    "top": 16,
     "left": 33
   },
   {
@@ -108,14 +108,14 @@
     "category": "sightsee",
     "order": 7,
     "text": "The Olympic National Park Visitor Center (3002 Mount Angeles Road) in Port Angeles is a great starting point. Talk to a ranger about the Elwha River restoration project.",
-    "top": 20,
+    "top": 22,
     "left": 44
   },
   {
     "category": "stay",
     "order": 8,
     "text": "The historic Lake Crescent Lodge, built in 1915, is the perfect starting point for your summer outdoors adventure. Visitors can stay in guest rooms or a lake-side cabin nestled among huge fir and hemlock trees lining the shoreline.",
-    "top": 27,
+    "top": 25,
     "left": 35
   },
   {
@@ -136,8 +136,8 @@
     "category": "eat",
     "order": 11,
     "text": "Fuel up on a huge burger at Fat Smitty’s Burgers (282624 U.S. Highway 101) located just south of Port Townsend. Inside just about every inch of the walls are plastered with dollar bills.",
-    "top": 26,
-    "left": 66
+    "top": 28,
+    "left": 63
   },
   {
     "category": "eat",
