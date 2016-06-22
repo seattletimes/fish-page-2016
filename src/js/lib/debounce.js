@@ -1,4 +1,4 @@
-module.exports = function(fn, duration = 100) {
+module.exports = function(fn, duration = 500) {
   var timeout;
 
   return function(...args) {

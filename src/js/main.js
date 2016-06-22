@@ -7,11 +7,14 @@ var animate = require("./lib/animateScroll");
 var qsa = require("./lib/qsa");
 var items = qsa(".item");
 var debounce = require("./lib/debounce");
+var icons = qsa(".icon");
+
 
 var mapContainer = document.querySelector(".map");
 var header = document.querySelector(".hed");
 var legend = document.querySelector(".legend");
-var icons = qsa(".icon");
+//This is the icon's order number.
+var lastinview;
 
 window.addEventListener("scroll", debounce(function(e) {
   var bounds = legend.getBoundingClientRect();
@@ -19,19 +22,36 @@ window.addEventListener("scroll", debounce(function(e) {
     mapContainer.classList.add("after-scroll");
   } else {
     mapContainer.classList.remove("after-scroll");
-  }
-}));
+  };
 
-var onClickIcon = function(e) {
-
-  //This is the icon's order number.
-  var pos = this.getAttribute("data-index");
-console.log(icons);
   items.forEach(function(item) {
-    if (item.dataset.order == pos) {
-      console.log(item);
+    var itembounds = item.getBoundingClientRect();
+    if (itembounds.top < window.innerHeight) {
+      lastinview = item;
+    }
+
+  });
+
+  icons.forEach(function(icon){
+    if (lastinview.dataset.id == icon.dataset.id) {
+      var focused = document.querySelector(".focused");
+
+      if (focused) {
+        focused.classList.remove("focused");
+      }
+        icon.classList.add("focused");
+    }
+  });
+
+}));
+console.log(lastinview);
+var onClickIcon = function(e) {
+  var pos = this.getAttribute("data-id");
+
+  items.forEach(function(item) {
+    console.log(item.dataset.id, pos);
+    if (item.dataset.id == pos) {
       animate(item);
-      icon.classList.add("onclick");
     }
   });
 
