@@ -3,31 +3,22 @@
 // var track = require("./lib/tracking");
 
 require("component-responsive-frame/child");
-var animate= require("./lib/animateScroll");
+var animate = require("./lib/animateScroll");
 var qsa = require("./lib/qsa");
 var items = qsa(".item");
-// qsa(".icon").forEach(function(i) {
+qsa(".icon").forEach(function(i) {
+  i.addEventListener("click", function(e) {
+    var order = i.getElementsByClassName("order")[0];
 
-//   i.addEventListener("click", function(e) {
-//     console.log("hi");
-//     var order = i.getAttribute("data-order");
-//     items.forEach(function(item) {
-//       if (item.getAttribute("data-order") == order) {
-//         animateScroll(item);
-//         console.log(item);
-//       }
-//     });
+    //This is the icon's order number.
+    var pos = order.innerHTML;
 
-//   });
-// });
+    items.forEach(function(item) {
+      if (item.dataset.order == pos) {
+        console.log(item);
+        animate(item);
+      }
+    });
 
-
-
-
-document.querySelector(".map").addEventListener("click", function(e) {
-  console.log(e.target);
+  });
 });
-
-// window.body.addEventListener("click", function(e) {
-//   console.log(e.target)
-// })

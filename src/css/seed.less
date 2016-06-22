@@ -7,12 +7,17 @@ body {
 }
 
 .hed {
-  max-width: 900px;
+  max-width: auto;
   margin: auto;
+  z-index: 10;
+  background-color: #FFF;
+  position: fixed;
 }
 
 .flex-container {
   .display-flex();
+  top:370px;
+  position: relative;
 }
 
 .main-text {
@@ -93,9 +98,9 @@ body {
   .flex(3);
   position: fixed;
   // position: relative;
-  width: 66%;
+  width: 50%;
   left: 0;
-  top: 300px;
+  top: 375px;
   // z-index: -1;
 
   @media @mobile {
