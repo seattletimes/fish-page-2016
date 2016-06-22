@@ -17,7 +17,6 @@ body {
 .flex-container {
   .display-flex();
   top:370px;
-  position: relative;
 }
 
 .main-text {
@@ -26,11 +25,10 @@ body {
   -webkit-transform: translateZ(0);
   z-index: 9;
   @width: 40%;
-
+position: relative;
   font-size: 15px;
   line-height: 1.6em;
   width: @width;
-  margin-left: 100% - @width;
 
   @media @mobile {
     width: 100%;
@@ -98,7 +96,7 @@ body {
   .flex(3);
   position: relative;
   // position: relative;
-  width: 50%;
+  width: 66%;
   left: 0;
   top: 375px;
   // z-index: -1;
