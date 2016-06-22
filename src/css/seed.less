@@ -21,7 +21,7 @@ body {
 }
 
 .flex-container {
-  // .display-flex();
+  .display-flex();
 }
 
 .main-text {
@@ -32,6 +32,8 @@ body {
   line-height: 1.6em;
   width: @width;
   margin-left: 100% - @width;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 
   @media @mobile {
     width: 100%;
@@ -119,13 +121,26 @@ body {
   position: fixed;
   width: 66%;
   left: 0;
-  z-index: -1;
   bottom: 0;
 
   @media (max-width: 1200px) {
     bottom: auto;
   }
 
+  #map-img {
+    opacity: .7;
+    transition: all .3s linear;
+  }
+
+  &.after-scroll {
+    #map-img {
+      opacity: 1;
+    }
+
+    .icon {
+      opacity: 1;
+    }
+  }
 
   @media @mobile {
     display: none;
@@ -136,6 +151,9 @@ body {
     width: 30px;
     position: absolute;
     text-align: center;
+    opacity: 0;
+    transition: all .3s linear;
+    cursor: pointer;
 
     .order {
       // font-weight: bold;
