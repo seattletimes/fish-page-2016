@@ -14,7 +14,7 @@ var mapContainer = document.querySelector(".map");
 var header = document.querySelector(".hed");
 var legend = document.querySelector(".legend");
 //This is the icon's order number.
-var lastinview;
+var lastinview = items[0];
 
 window.addEventListener("scroll", debounce(function(e) {
   var bounds = header.getBoundingClientRect();
@@ -26,7 +26,7 @@ window.addEventListener("scroll", debounce(function(e) {
 
   items.forEach(function(item) {
     var itembounds = item.getBoundingClientRect();
-    if (itembounds.top < window.innerHeight) {
+    if (itembounds.top < window.innerHeight * 0.5) {
       lastinview = item;
     }
 
