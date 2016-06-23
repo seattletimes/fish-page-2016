@@ -17,7 +17,7 @@ var legend = document.querySelector(".legend");
 var lastinview;
 
 window.addEventListener("scroll", debounce(function(e) {
-  var bounds = legend.getBoundingClientRect();
+  var bounds = header.getBoundingClientRect();
   if (bounds.bottom < 0) {
     mapContainer.classList.add("after-scroll");
   } else {
@@ -40,6 +40,9 @@ window.addEventListener("scroll", debounce(function(e) {
         focused.classList.remove("focused");
       }
         icon.classList.add("focused");
+        console.log(lastinview);
+        lastinview.classList.add("bold");
+
     }
   });
 

@@ -70,8 +70,34 @@ body {
   .item {
     padding-bottom: 60px;
     // border-bottom: 1px solid @df-light-gray;
+    &.focused {
+      font-weight: bold;
+  }
   }
 
+  .legend {
+    align: center;
+
+    img {
+      height: 30%;
+      width: 30%;
+    display: inline-grid;
+    }
+
+
+  }
+
+  .legend2 {
+    width:25%;
+    position: sticky;
+    img {
+      height: 5%;
+      width: 5%;
+      display: grid;
+      position: fixed;
+      .flex(3);
+    }
+  }
   .label {
     font-family: @df-sans;
     font-weight: bold;
@@ -86,7 +112,7 @@ body {
       margin-left: 10px;
       margin-top: 4px;
       opacity: 20%;
-    }
+
 
     .order-splotch {
       position: relative;
@@ -123,8 +149,8 @@ body {
   position: fixed;
   width: 66%;
   left: 0;
-  bottom: 0;
-
+  bottom: 10%;
+  transition: all .3s ease-in-out;
 
   #map-img {
     opacity: .7;
@@ -132,11 +158,11 @@ body {
   }
 
   &.after-scroll {
+    bottom: 50%;
+    transform: translateY(50%);
+
     #map-img {
       opacity: 1;
-      top: 50%;
-      transform: translateY(10%);
-      bottom: auto;
     }
 
     .icon {
@@ -156,11 +182,11 @@ body {
     opacity: 0;
     transition: all .3s linear;
     cursor: pointer;
+    transform-origin: 50% 50%;
+
       &.focused {
-        img {
-          height: auto;
-          width: 100%;
-        }
+          transform: scale(1.5);
+          max-width: 200%;
       }
       .order {
         // font-weight: bold;
