@@ -58,7 +58,7 @@ transform: translateZ(0);
       img {
         height: 30%;
         width: 30%;
-      display: inline-grid;
+        display: inline-grid;
       }
   }
 
@@ -126,7 +126,7 @@ transform: translateZ(0);
 
 .map {
   position: fixed;
-  width: 66%;
+  width: 60%;
   left: 0;
   top: 25%;
   transition: all .3s ease-in-out;
@@ -138,8 +138,9 @@ transform: translateZ(0);
 
   .legend2 {
     img {
-      height: 23%;
-      width: 23%;
+      height: 20%;
+      width: 20%;
+      opacity: 0;
     }
   }
 
@@ -153,6 +154,10 @@ transform: translateZ(0);
     }
 
     .icon {
+      opacity: 1;
+    }
+
+    .legend2 img{
       opacity: 1;
     }
   }

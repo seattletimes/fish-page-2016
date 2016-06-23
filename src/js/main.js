@@ -26,7 +26,7 @@ window.addEventListener("scroll", debounce(function(e) {
 
   items.forEach(function(item) {
     var itembounds = item.getBoundingClientRect();
-    if (itembounds.top < window.innerHeight) {
+    if (itembounds.top < window.innerHeight * .5) {
       lastinview = item;
     }
 
