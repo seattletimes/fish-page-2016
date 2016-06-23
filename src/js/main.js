@@ -32,32 +32,34 @@ window.addEventListener("scroll", debounce(function(e) {
 
   });
 
-  icons.forEach(function(icon){
+  icons.forEach(function(icon) {
     if (lastinview.dataset.id == icon.dataset.id) {
       var focused = document.querySelector(".focused");
 
+      var bold = document.querySelector(".bold");
       if (focused) {
         focused.classList.remove("focused");
       }
+      if (bold) {
+        bold.classList.remove("bold")
+      }
         icon.classList.add("focused");
-        console.log(lastinview);
         lastinview.classList.add("bold");
 
     }
   });
 
 }));
-console.log(lastinview);
+
 var onClickIcon = function(e) {
   var pos = this.getAttribute("data-id");
-
+  console.log(this);
   items.forEach(function(item) {
-    console.log(item.dataset.id, pos);
     if (item.dataset.id == pos) {
       animate(item);
     }
   });
 
-}
+};
 
 qsa(".icon").forEach(i => i.addEventListener("click", onClickIcon));
