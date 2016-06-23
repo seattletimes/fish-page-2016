@@ -20,10 +20,8 @@ body {
   }
 }
 
-
 .main-text {
   @width: 40%;
-
   font-size: 15px;
   line-height: 1.6em;
   width: @width;
@@ -46,6 +44,7 @@ body {
       font-size: 16px;
     }
   }
+
   .credits {
     font-style: italic;
     line-height: 1.6em;
@@ -54,13 +53,13 @@ body {
   }
 
   .legend {
-      align: center;
+    align: center;
 
-      img {
-        height: 30%;
-        width: 30%;
+    img {
+      height: 30%;
+      width: 30%;
       display: inline-grid;
-      }
+    }
   }
 
   .header {
@@ -84,7 +83,7 @@ body {
       // font-weight: bold;
       background: rgba(255,255,255,0.5);
       border-radius: 4px;
-      border: 2px solid @df-middle-gray;
+      border-left: 2px solid @df-middle-gray;
     }
   }
 
@@ -124,9 +123,9 @@ body {
       font-size: 18px;
       font-weight: 400;
 
-        .icon {
-          font-size: 8px;
-        }
+      .icon {
+        font-size: 8px;
+      }
     }
   }
 }
@@ -143,13 +142,14 @@ body {
     transition: all .3s linear;
   }
 
-  .legend2 {
-    img {
-      height: 23%;
-      width: 23%;
-      opacity: 0;
-      transition: all .3s linear;
+  .legend {
+    .display-flex();
+    padding: 0 60px;
+    opacity: 0;
+    transition: all .2s linear;
 
+    img {
+      width: 100%;
     }
   }
 
@@ -157,20 +157,20 @@ body {
     top: 40%;
     transform: translateY(-40%);
 
-    .legend2 img {
-      opacity: 1;
-    }
-
     #map-img {
       opacity: 1;
     }
 
     .icon {
+      opacity: .4;
+    }
+
+    .legend {
       opacity: 1;
     }
   }
 
-@media (max-width: 1200px) {
+  @media (max-width: 1200px) {
     bottom: auto;
   }
 
@@ -189,23 +189,29 @@ body {
     cursor: pointer;
     transform-origin: 50% 50%;
 
-      &.focused {
-          transform: scale(1.5);
-          max-width: 200%;
-      }
-      .order {
-        // font-weight: bold;
-        position: absolute;
-        font-family: @df-sans;
-        color: white;
-        font-size: 13px;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
-        -webkit-transform: translateY(-50%) translateX(-50%);
-      }
+    &:hover, &:focus {
+      opacity: 1;
+      z-index: 999;
+    }
 
-
+    &.focused {
+      transform: scale(1.5);
+      max-width: 200%;
+      opacity: 1;
+      z-index: 999;
+    }
+    
+    .order {
+      // font-weight: bold;
+      position: absolute;
+      font-family: @df-sans;
+      color: white;
+      font-size: 13px;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      -webkit-transform: translateY(-50%) translateX(-50%);
+    }
   }
 }
 
