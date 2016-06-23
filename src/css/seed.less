@@ -52,15 +52,21 @@ body {
     padding-top: 10px;
   }
 
-  .legend {
-    align: center;
-
-    img {
-      height: 30%;
-      width: 30%;
-      display: inline-grid;
-    }
+  .share {
   }
+
+  .legend {
+    .display-flex();
+    padding: 0 10px;
+    span {
+      display: none;
+    }
+    @media @mobile {
+      span {
+        display: block;
+      }
+    }
+  } //legend
 
   .header {
     font-family: @df-sans;
@@ -79,12 +85,26 @@ body {
     line-height: 1.6em;
     font-size: 18px;
     // border-bottom: 1px solid @df-light-gray;
+    @not-mobile {
     &.bold {
       // font-weight: bold;
       background: rgba(255,255,255,0.5);
       border-radius: 4px;
-      border-left: 2px solid @df-middle-gray;
+      border-left: 3px solid black;
+
+      &.sightsee {
+        border-left-color: #B53F10;
+      }
+
+      &.stay {
+        border-left-color: #466C9E;
+      }
+
+      &.eat {
+        border-left-color: #8A7670;
+      }
     }
+  }
   }
 
   .label {
@@ -134,8 +154,13 @@ body {
   position: fixed;
   width: 66%;
   left: 0;
-  top: 25%;
+  top: 35%;
   transition: all .3s ease-in-out;
+  @media @mobile {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   #map-img {
     opacity: .7;
@@ -148,35 +173,36 @@ body {
     opacity: 0;
     transition: all .2s linear;
 
+    @media @mobile {
+      display: none;
+    }
     img {
       width: 100%;
     }
   }
 
-  &.after-scroll {
-    top: 40%;
-    transform: translateY(-40%);
+  @media @not-mobile {
 
-    #map-img {
-      opacity: 1;
-    }
+    &.after-scroll {
+      top: 40%;
+      transform: translateY(-40%);
 
-    .icon {
-      opacity: .4;
-    }
+      #map-img {
+        opacity: 1;
+      }
 
-    .legend {
-      opacity: 1;
+      .icon {
+        opacity: .4;
+      }
+
+      .legend {
+        opacity: 1;
+      }
     }
   }
 
   @media (max-width: 1200px) {
     bottom: auto;
-  }
-
-
-  @media @mobile {
-    display: none;
   }
 
   .icon {
@@ -194,13 +220,25 @@ body {
       z-index: 999;
     }
 
-    &.focused {
-      transform: scale(1.5);
-      max-width: 200%;
+    @media @mobile {
       opacity: 1;
-      z-index: 999;
+      height: 10px;
+      width: 10px;
+        .order {
+          visibility: hidden;
+        }
+      }
+
+    @media @not-mobile {
+
+      &.focused {
+        transform: scale(1.5);
+        max-width: 200%;
+        opacity: 1;
+        z-index: 999;
+      }
     }
-    
+
     .order {
       // font-weight: bold;
       position: absolute;

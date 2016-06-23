@@ -8,7 +8,7 @@
     <%= t.include("partials/_head.html") %>
   </head>
   <body>
-
+    <%= t.include("./partials/_ad.html", { type: "banner" }) %>
     <nav class="top-bar">
       <a class="logo" href="http://seattletimes.com">
         <img src="./assets/seattletimes.svg">
@@ -59,8 +59,6 @@
             <% }%>
           </div>
 
-
-
         <% });
       } %>
     </div>
@@ -68,12 +66,14 @@
 
 
       <div class="main-text">
+        <div class="legend">
+          <span><a href="#fish"><img src="./assets/Headers/fish-header.png"></a></span>
+          <a href="#sightsee"><img src="./assets/Headers/sightsee-header.png"></a>
+          <a href="#stay"><img src="./assets/Headers/stay-header.png"></a>
+          <a href="#eat"><img src="./assets/Headers/eat-header.png"></a>
+        </div>
         <div class="intro">Have you ever been to a special place you never wanted to leave? Then it’s time to set your sights for the snow-capped peaks of Olympic National Park – home to some of the state’s best fresh- and salt-water fishing. Within the park, there are 31 native freshwater fish species from 11 different families of fish, and at least 70 unique populations of salmon, trout and char, as well as five non-native fish. It might feel like you’re hundreds of miles away from civilization, but the park is just a three-hour drive from Seattle.
-          <div class="legend">
-            <a href="#sightsee"><img src="./assets/Headers/sightsee-header.png"></a>
-            <a href="#stay"><img src="./assets/Headers/stay-header.png"></a>
-            <a href="#eat"><img src="./assets/Headers/eat-header.png"></a>
-          </div>
+          <a class="share top"></a>
           <div class="credits">
             Reporting by Mark Yuasa<br>
             Graphics and illustration by Kelly Shea<br>
@@ -85,28 +85,49 @@
         var sections = [{
           headerImage: "fish-header.png",
           category: "fish",
-          splotch: "splotch-1"
-        }];
+          splotch: "splotch-1",
+        },
+
+        {
+          headerImage: "sightsee-header.png",
+          category: "sightsee",
+          splotch: "splotch-sightsee",
+        },
+
+        {
+          headerImage: "stay-header.png",
+          category: "stay",
+          splotch: "splotch-stay",
+        },
+
+        {
+          headerImage: "eat-header.png",
+          category: "eat",
+          splotch: "splotch-eat",
+        }
+        ];
 
         sections.forEach(function(section) { %>
-          <div class="header" id="<%= section.category %>">
-            <img src="./assets/Headers/<%= section.headerImage %>">
-          </div>
-
-          <% 
-            var cat = categories[section.category];
-            cat.forEach(function(item) { %>
-          <div class="item" data-id="<%= item.id %>">
-            <img src="./assets/Fish/<%=item.image%>-final.png">
-            <div class="label">
-
-              <div class="order-splotch">
-                <img class="splotch" src="./assets/Icons/<%= section.splotch %>.png">
-                <div class="order"><%=item.order%></div>
-              </div>
-
-              <div class="text"><%= item.label %></div>
+            <div class="header" id="<%= section.category %>">
+              <img src="./assets/Headers/<%= section.headerImage %>">
             </div>
+
+          <% var cat = categories[section.category];
+            cat.forEach(function(item) { %>
+
+            <div class="<%= section.category %> item" data-id="<%= item.id %>">
+              <% if (item.image) { %>
+              <img src="./assets/Fish/<%=item.image%>-final.png">
+                <% } %>
+              <div class="label">
+
+                <div class="order-splotch">
+                  <img class="splotch" src="./assets/Icons/<%= section.splotch %>.png">
+                  <div class="order"><%=item.order%></div>
+                </div>
+
+                <div class="text"><%= item.label %></div>
+              </div>
             <%= item.text %>
           </div>
         <% })
