@@ -196,6 +196,12 @@ body {
 
       .icon {
         opacity: .4;
+        cursor: pointer;
+
+        &:hover, &:focus {
+          opacity: 1;
+          z-index: 999;
+        }
       }
 
       .legend {
@@ -215,13 +221,7 @@ body {
     text-align: center;
     opacity: 0;
     transition: all .3s linear;
-    cursor: pointer;
     transform-origin: 50% 50%;
-
-    &:hover, &:focus {
-      opacity: 1;
-      z-index: 999;
-    }
 
     @media @mobile {
       opacity: 1;

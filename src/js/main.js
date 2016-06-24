@@ -58,3 +58,12 @@ var onClickIcon = function(e) {
 };
 
 qsa(".icon").forEach(i => i.addEventListener("click", onClickIcon));
+
+var onJump = function(e) {
+  e.preventDefault();
+  var href = this.getAttribute("href");
+  var target = document.querySelector(href);
+  animate(target);
+}
+
+qsa(".jump").forEach(el => el.addEventListener("click", onJump));
