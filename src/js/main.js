@@ -11,7 +11,7 @@ var icons = qsa(".icon");
 
 var mapContainer = document.querySelector(".map");
 var header = document.querySelector(".hed");
-var legend = document.querySelector(".legend");
+var d = document.querySelector(".d");
 
 window.addEventListener("scroll", debounce(function(e) {
   var bounds = header.getBoundingClientRect();

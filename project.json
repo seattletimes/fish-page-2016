@@ -5,16 +5,16 @@
       "path": "fish-page"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2016/exploring-the-olympic-peninsula"
     }
   },
-  "title": "",
-  "description": "",
-  "url": "",
+  "title": "Exploring the Olympic Peninsula",
+  "description": "Have you ever been to a special place you never wanted to leave? Then it’s time to set your sights for the snow-capped peaks of Olympic National Park.",
+  "url": "http://projects.seattletimes.com/2016/exploring-the-olympic-peninsula/",
   "slug": "",
   "tags": [],
-  "image": "src/assets/",
+  "image": "assets/Fish/surfperch-final.png",
   "sheets": ["1kjayA9lxO8gQPVGvHPgfO8efpjGu80hYAACDDy8AIC4"],
   "production": false,
   "embedded": false
