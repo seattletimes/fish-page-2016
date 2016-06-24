@@ -148,6 +148,17 @@
 
     </div>
 
+    <div class="linking-out">
+      <%= t.include("partials/_dontMiss.html", { data: [
+        { link: "http://www.seattletimes.com/life/travel/washingtons-wild-and-magical-shi-shi-beach-2/", image: "teasers/shishi.jpg", head: "Washington's wild and magical Shi Shi Beach"},
+        { link: "http://www.seattletimes.com/life/travel/five-places-to-stay-in-and-near-olympic-national-park/", image: "teasers/stay.jpg", head: "Five places to stay in and near Olympic National Park" },
+        { link: "http://www.seattletimes.com/life/travel/3-top-drives-in-olympic-national-park/", image: "teasers/olympic-drives.jpg", head: "Three top drives in Olympic National Park" },
+        { link: "http://projects.seattletimes.com/2016/elwha/", image: "teasers/elwha.jpg", head: "Elwha: Roaring back to life" }
+      ]}) %>
+    </div>
+
+    <%= t.include("partials/_navBottom.html") %>
+
     <script src="app.js" async></script>
     <% if (json.project.production) { %>
     <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
