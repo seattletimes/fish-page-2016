@@ -9,6 +9,9 @@ body {
 .hed {
   margin: auto;
   text-align: center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 999;
 
   img {
     width: 60%;
@@ -58,6 +61,15 @@ body {
   .legend {
     .display-flex();
     padding: 0 10px;
+
+    a {
+      display: block;
+      .flex(1);
+    }
+
+    img {
+      width: 100%;
+    }
     span {
       display: none;
     }
@@ -85,26 +97,26 @@ body {
     line-height: 1.6em;
     font-size: 18px;
     // border-bottom: 1px solid @df-light-gray;
-    @not-mobile {
-    &.bold {
-      // font-weight: bold;
-      background: rgba(255,255,255,0.5);
-      border-radius: 4px;
-      border-left: 3px solid black;
+    @media @not-mobile {
+      &.bold {
+        // font-weight: bold;
+        background: rgba(255,255,255,0.5);
+        border-radius: 4px;
+        border-left: 3px solid black;
 
-      &.sightsee {
-        border-left-color: #B53F10;
-      }
+        &.sightsee {
+          border-left-color: #B53F10;
+        }
 
-      &.stay {
-        border-left-color: #466C9E;
-      }
+        &.stay {
+          border-left-color: #466C9E;
+        }
 
-      &.eat {
-        border-left-color: #8A7670;
+        &.eat {
+          border-left-color: #8A7670;
+        }
       }
     }
-  }
   }
 
   .label {
