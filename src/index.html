@@ -27,14 +27,16 @@
     %>
 
     <div class="map">
-      <div class="legend">
-        <a href="#fish"><img src="./assets/Headers/fish-header.png"></a>
-        <a href="#sightsee"><img src="./assets/Headers/sightsee-header.png"></a>
-        <a href="#stay"><img src="./assets/Headers/stay-header.png"></a>
-        <a href="#eat"><img src="./assets/Headers/eat-header.png"></a>
-      </div>
 
       <img id="map-img" src="./assets/Map/wash-map-final.png">
+
+      <div class="legend">
+        <a href="#fish"><img src="./assets/Headers/fish-header-icon.png"></a>
+        <a href="#sightsee"><img src="./assets/Headers/sightsee-header-icon.png"></a>
+        <a href="#stay"><img src="./assets/Headers/stay-header-icon.png"></a>
+        <a href="#eat"><img src="./assets/Headers/eat-header-icon.png"></a>
+      </div>
+
       <% for (var c in categories) {
         var cat = categories[c];
         cat.forEach(function(item) { %>
