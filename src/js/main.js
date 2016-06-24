@@ -1,8 +1,8 @@
 require("./lib/social");
 require("./lib/ads");
-// var track = require("./lib/tracking");
+var track = require("./lib/tracking");
 
-require("component-responsive-frame/child");
+//require("component-responsive-frame/child");
 var animate = require("./lib/animateScroll");
 var qsa = require("./lib/qsa");
 var items = qsa(".item");
