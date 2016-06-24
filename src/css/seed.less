@@ -22,6 +22,31 @@ body {
       width: 100%;
     }
   }
+
+  .share {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    label {
+      background: white !important;
+    }
+
+    @media @mobile {
+
+      width: 40px !important;
+
+      label {
+        span {
+          display: none;
+        }
+      }
+
+      .left {
+        margin-left: -275px !important;
+      }
+    }
+  }
 }
 
 .main-text {
@@ -54,9 +79,6 @@ body {
     line-height: 1.6em;
     font-size: 14px;
     padding-top: 10px;
-  }
-
-  .share {
   }
 
   .legend {
