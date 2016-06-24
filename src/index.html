@@ -17,7 +17,7 @@
 
     <div class="hed">
       <a class="share top"></a>
-      <img src="./assets/Fish/olympicfish-headline.png">
+      <img src="./assets/Fish/olympicfish-headline.png" alt="Exploring the Olympic Peninsula">
     </div>
 
     <div class="flex-container">
@@ -112,16 +112,24 @@
         ];
 
         sections.forEach(function(section) { %>
+  
             <div class="header" id="<%= section.category %>">
               <img src="./assets/Headers/<%= section.headerImage %>">
             </div>
-
-          <% var cat = categories[section.category];
+            <%  if (section.category === "fish") { %>
+          
+             <div class="download"> 
+               <a href="assets/Files/coloring-fish.zip">Click here to download coloring pages of the fish below. </a>
+               </div>
+          <% }  
+             var cat = categories[section.category];
             cat.forEach(function(item) { %>
 
             <div class="<%= section.category %> item" data-id="<%= item.id %>">
               <% if (item.image) { %>
-              <img src="./assets/Fish/<%=item.image%>-final.png">
+
+              <img src="./assets/Fish/<%=item.image%>-final.png" alt="<%=item.image%>">
+                
                 <% } %>
               <div class="label">
 
