@@ -1,30 +1,30 @@
 <!doctype html>
 <html>
-  <head>
-    <title><%= json.project.title %></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <%= t.include("partials/_head.html") %>
-  </head>
-  <body>
-    <%= t.include("./partials/_ad.html", { type: "banner" }) %>
-    <nav class="top-bar">
-      <a class="logo" href="http://seattletimes.com">
-        <img src="./assets/seattletimes.svg">
-      </a>
-    </nav>
+<head>
+  <title><%= json.project.title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <%= t.include("partials/_head.html") %>
+</head>
+<body>
+  <%= t.include("./partials/_ad.html", { type: "banner" }) %>
+  <nav class="top-bar">
+    <a class="logo" href="http://seattletimes.com">
+      <img src="./assets/seattletimes.svg">
+    </a>
+  </nav>
 
-    <div class="hed">
-      <a class="share top"></a>
-      <img src="./assets/Fish/olympicfish-headline.png" alt="Exploring the Olympic Peninsula">
-    </div>
+  <div class="hed">
+    <a class="share top"></a>
+    <img src="./assets/Fish/olympicfish-headline.png" alt="Exploring the Olympic Peninsula">
+  </div>
 
-    <div class="flex-container">
+  <div class="fish-container">
 
     <% var categories = {};
       json.FishPage2016_Sheet1.forEach(function(item) {
-        if (!categories[item.category]) categories[item.category] = [];
+      if (!categories[item.category]) categories[item.category] = [];
         categories[item.category].push(item);
       });
     %>
@@ -44,25 +44,25 @@
         var cat = categories[c];
         cat.forEach(function(item) { %>
 
-          <div class="icon" data-id="<%= item.id %>" style="top: <%= item.top %>%; left: <%= item.left %>%;">
-            <div class="order"><%=item.order%></div>
+        <div class="icon" data-id="<%= item.id %>" style="top: <%= item.top %>%; left: <%= item.left %>%;">
+          <div class="order"><%=item.order%></div>
 
-            <% if (item.category === "fish") { %>
-              <img src="./assets/Icons/splotch-1.png">
-            <% }
-            else if (item.category === "stay")  { %>
-              <img src="./assets/Icons/splotch-stay.png">
+          <% if (item.category === "fish") { %>
+          <img src="./assets/Icons/splotch-1.png">
+          <% }
+          else if (item.category === "stay")  { %>
+          <img src="./assets/Icons/splotch-stay.png">
 
-            <% }
-            else if (item.category === "sightsee") { %>
-              <img src="./assets/Icons/splotch-sightsee.png">
-            <% }
+          <% }
+          else if (item.category === "sightsee") { %>
+          <img src="./assets/Icons/splotch-sightsee.png">
+          <% }
 
-            else { %>
-              <img src="./assets/Icons/splotch-eat.png">
+          else { %>
+          <img src="./assets/Icons/splotch-eat.png">
 
-            <% }%>
-          </div>
+          <% }%>
+        </div>
 
         <% });
       } %>
@@ -70,26 +70,26 @@
 
 
 
-      <div class="main-text">
-        <div class="legend">
-          <a href="#fish" class="jump fish"><img src="./assets/Headers/fish-header.png"></a>
-          <a href="#sightsee" class="jump"><img src="./assets/Headers/sightsee-header.png"></a>
-          <a href="#stay" class="jump"><img src="./assets/Headers/stay-header.png"></a>
-          <a href="#eat" class="jump"><img src="./assets/Headers/eat-header.png"></a>
+    <div class="main-text">
+      <div class="legend">
+        <a href="#fish" class="jump fish"><img src="./assets/Headers/fish-header.png"></a>
+        <a href="#sightsee" class="jump"><img src="./assets/Headers/sightsee-header.png"></a>
+        <a href="#stay" class="jump"><img src="./assets/Headers/stay-header.png"></a>
+        <a href="#eat" class="jump"><img src="./assets/Headers/eat-header.png"></a>
+      </div>
+      <div class="intro">Have you ever been to a special place you never wanted to leave? Then it’s time to set your sights for the snow-capped peaks of Olympic National Park – home to some of the state’s best fresh- and salt-water fishing. Within the park, there are 31 native freshwater fish species from 11 different families of fish, and at least 70 unique populations of salmon, trout and char, as well as five non-native fish. It might feel like you’re hundreds of miles away from civilization, but the park is just a three-hour drive from Seattle.
+        <div class="credits">
+          Reporting by Mark Yuasa<br>
+          Graphics and illustration by Kelly Shea<br>
+          Development by Elif Koc
         </div>
-        <div class="intro">Have you ever been to a special place you never wanted to leave? Then it’s time to set your sights for the snow-capped peaks of Olympic National Park – home to some of the state’s best fresh- and salt-water fishing. Within the park, there are 31 native freshwater fish species from 11 different families of fish, and at least 70 unique populations of salmon, trout and char, as well as five non-native fish. It might feel like you’re hundreds of miles away from civilization, but the park is just a three-hour drive from Seattle.
-          <div class="credits">
-            Reporting by Mark Yuasa<br>
-            Graphics and illustration by Kelly Shea<br>
-            Development by Elif Koc
-          </div>
-        </div>
+      </div>
 
-        <%
-        var sections = [{
-          headerImage: "fish-header.png",
-          category: "fish",
-          splotch: "splotch-1",
+      <%
+      var sections = [{
+        headerImage: "fish-header.png",
+        category: "fish",
+        splotch: "splotch-1",
         },
 
         {
@@ -111,58 +111,57 @@
         }
         ];
 
-        sections.forEach(function(section) { %>
-  
-            <div class="header" id="<%= section.category %>">
-              <img src="./assets/Headers/<%= section.headerImage %>">
-            </div>
-            <%  if (section.category === "fish") { %>
-          
-             <div class="download"> 
-               <a href="./assets/Files/ColoringFish.pdf">Click here to download coloring pages of the fish below. </a>
-               </div>
-          <% }  
-             var cat = categories[section.category];
-            cat.forEach(function(item) { %>
+      sections.forEach(function(section) { %>
 
-            <div class="<%= section.category %> item" data-id="<%= item.id %>">
-              <% if (item.image) { %>
+      <div class="header" id="<%= section.category %>">
+        <img src="./assets/Headers/<%= section.headerImage %>">
+      </div>
 
-              <img src="./assets/Fish/<%=item.image%>-final.png" alt="<%=item.image%>">
-                
-                <% } %>
-              <div class="label">
+      <%  if (section.category === "fish") { %>
+      <div class="download"> 
+        <a href="./assets/Files/ColoringFish.pdf">Click here to download coloring pages of the fish below. </a>
+      </div>
+      <% }  
+        var cat = categories[section.category];
+        cat.forEach(function(item) { %>
 
-                <div class="order-splotch">
-                  <img class="splotch" src="./assets/Icons/<%= section.splotch %>.png">
-                  <div class="order"><%=item.order%></div>
-                </div>
+      <div class="<%= section.category %> item" data-id="<%= item.id %>">
+        <% if (item.image) { %>
+        <img src="./assets/Fish/<%=item.image%>-final.png" alt="<%=item.image%>">
+        <% } %>
+        
+        <div class="label">
 
-                <div class="text"><%= item.label %></div>
-              </div>
-            <%= item.text %>
+          <div class="order-splotch">
+            <img class="splotch" src="./assets/Icons/<%= section.splotch %>.png">
+            <div class="order"><%=item.order%></div>
           </div>
-        <% })
-        })
-        %>
+
+          <div class="text"><%= item.label %></div>
+        </div>
+            <%= item.text %>
+      </div>
+      <% })
+      }) %>
 
     </div>
+  </div>
 
-    <div class="linking-out">
-      <%= t.include("partials/_dontMiss.html", { data: [
-        { link: "http://www.seattletimes.com/life/travel/washingtons-wild-and-magical-shi-shi-beach-2/", image: "teasers/shishi.jpg", head: "Washington's wild and magical Shi Shi Beach"},
-        { link: "http://www.seattletimes.com/life/travel/five-places-to-stay-in-and-near-olympic-national-park/", image: "teasers/stay.jpg", head: "Five places to stay in and near Olympic National Park" },
-        { link: "http://www.seattletimes.com/life/travel/3-top-drives-in-olympic-national-park/", image: "teasers/olympic-drives.jpg", head: "Three top drives in Olympic National Park" },
-        { link: "http://projects.seattletimes.com/2016/elwha/", image: "teasers/elwha.jpg", head: "Elwha: Roaring back to life" }
+  <div class="linking-out">
+    <%= t.include("partials/_dontMiss.html", { data: [
+      { link: "http://www.seattletimes.com/life/travel/washingtons-wild-and-magical-shi-shi-beach-2/", image: "teasers/shishi.jpg", head: "Washington's wild and magical Shi Shi Beach"},
+      { link: "http://www.seattletimes.com/life/travel/five-places-to-stay-in-and-near-olympic-national-park/", image: "teasers/stay.jpg", head: "Five places to stay in and near Olympic National Park" },
+      { link: "http://www.seattletimes.com/life/travel/3-top-drives-in-olympic-national-park/", image: "teasers/olympic-drives.jpg", head: "Three top drives in Olympic National Park" },
+      { link: "http://projects.seattletimes.com/2016/elwha/", image: "teasers/elwha.jpg", head: "Elwha: Roaring back to life" }
       ]}) %>
-    </div>
+  </div>
 
-    <%= t.include("partials/_navBottom.html") %>
+  <%= t.include("partials/_navBottom.html") %>
 
-    <script src="app.js" async></script>
-    <% if (json.project.production) { %>
-    <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
-    <%= t.include("partials/_workHere.html") %>
-    <% } %>
-  </body>
+  <script src="app.js" async></script>
+  <% if (json.project.production) { %>
+  <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
+  <%= t.include("partials/_workHere.html") %>
+  <% } %>
+</body>
 </html>
