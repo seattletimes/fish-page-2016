@@ -6,7 +6,7 @@
     "text": "The northernmost tip of Washington is the dividing point as salmon migrate south along the coast or head into the Strait of Juan de Fuca. Many anglers make their summertime trek to catch large-sized chinook “king” salmon here. Fishing opens at Neah Bay from July 1-Aug. 21 or until a catch quota of 6,200 chinook is achieved. La Push is open from July 1-Aug. 21 or until a catch quota of 2,000 chinook is achieved. A robust population of lingcod, kelp greenling and black rockfish are here, too.",
     "image": "chinook",
     "top": 8,
-    "left": 8,
+    "left": 6,
     "id": 0
   },
   {
@@ -55,8 +55,8 @@
     "label": "Surf perch at Kalaloch Beach",
     "text": "A relatively flat beach-line and excellent access to nearby Kalaloch Lodge makes this a prime location to easily fish for a red tail surf perch. This under-fished species and largest in the surf perch family can be caught year-round, with summer offering the best action. Surf perch average 1 to 3 pounds. Key to success is looking for depressions, drop offs and deeper cuts in the beaches where the perch tend to school up. Use a long, stout fishing rod of 10 to 14 feet and a heavy spinning reel with 10- to 20-pound test fishing line. A slip sinker, three-quarters to 1 ounce, or a pyramid sinker of 3 to 5 ounces with a three-way swivel tied to a leader 20 to 30 inches long will get your bait where the fish are. Baits of choice are sand or ghost shrimp, sand crabs, mussels, clam necks, squid and pile worms. Soft plastic jigs laced with anise scent as well as Buzz Bomb-type jigs will attract fish.",
     "image": "surfperch",
-    "top": 44,
-    "left": 14,
+    "top": 46,
+    "left": 16,
     "id": 5
   },
   {
@@ -83,8 +83,8 @@
     "order": 2,
     "label": "Quillayute Needles National Wildlife Refuge",
     "text": "The Quillayute Needles National Wildlife Refuge and La Push at First, Second and Third Beaches are located 14 miles from the town of Forks. First Beach is the only beach accessible by vehicle. Be sure to check out the waterfall that drops onto the isolated cove at Taylor Point.",
-    "top": 32,
-    "left": 9,
+    "top": 35,
+    "left": 12,
     "id": 8
   },
   {
@@ -92,8 +92,8 @@
     "order": 3,
     "label": "Ruby Beach",
     "text": "Be sure to take a trip to Ruby Beach – named for the reddish sand of the northernmost beach at Kalaloch – located about six miles north of Kalaloch Lodge. The beach is lined with vast amounts of driftwood, and is an ideal viewpoint of the legendary sea stacks (large island rock formations).",
-    "top": 36,
-    "left": 11,
+    "top": 39,
+    "left": 14,
     "id": 9
   },
   {
@@ -137,7 +137,7 @@
     "order": 8,
     "label": "Lake Crescent Lodge",
     "text": "The historic Lake Crescent Lodge, built in 1915, is the perfect starting point for your summer outdoors adventure. Visitors can stay in guest rooms or a lake-side cabin nestled among huge fir and hemlock trees lining the shoreline.",
-    "top": 23,
+    "top": 21,
     "left": 32,
     "id": 14
   },
@@ -155,7 +155,7 @@
     "order": 10,
     "label": "Kalaloch Lodge",
     "text": "The Kalaloch Lodge is set on a bluff overlooking the ocean. The Quinault Indians called this coastal area “Kalaloch” or “good place to land,” and it offers beachcombing, fishing, bird and whale watching - plus spectacular sunsets.",
-    "top": 47,
+    "top": 48,
     "left": 15,
     "id": 16
   },

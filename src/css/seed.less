@@ -64,6 +64,7 @@ body {
     margin-left: 0;
   }
 
+
   .intro {
     font-size: 18px;
     line-height: 1.6em;
@@ -91,15 +92,15 @@ body {
     }
 
     img {
-      width: 100%;
     }
-    span {
+    a.fish {
       display: none;
     }
     @media @mobile {
-      span {
-        display: block;
+      a.fish {
+        display:block;
       }
+      
     }
   } //legend
 
@@ -195,6 +196,12 @@ body {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+  }
+  
+  @media @big-screen {
+     width:50%;
+     margin-top: auto;
+    margin-bottom: auto;
   }
 
   #map-img {
