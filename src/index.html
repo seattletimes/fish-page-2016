@@ -140,6 +140,10 @@
           <div class="text"><%= item.label %></div>
         </div>
             <%= item.text %>
+         <% if (item.link) { %>
+              
+              <a href="<%=item.link%>">More details</a>
+              <% } %>
       </div>
       <% })
       }) %>
